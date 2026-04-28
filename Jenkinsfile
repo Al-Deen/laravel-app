@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Al-Deen/laravel-app.git'
+                git branch: 'main', url: 'https://github.com/Al-Deen/laravel-app.git'
             }
         }
         stage('Test') {
