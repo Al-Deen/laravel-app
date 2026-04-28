@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/আপনার_ইউজারনেম/laravel-app.git'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                // এখানে PHPUnit টেস্ট রান করানোর কমান্ড থাকবে
+            }
+        }
+        stage('Build & Deploy') {
+            steps {
+                echo 'Building docker image and deploying...'
+            }
+        }
+    }
+}
